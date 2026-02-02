@@ -83,35 +83,7 @@
 
   addLoaderStyles()
 
-  js = d.createElement(s);
-  fjs = document.currentScript || d.getElementsByTagName(s)[0];
-  js.id = o;
-  js.src = f;
-  js.defer = true;
-
-  js.onload = function () {
-    isWidgetReady = true;
-    hideLoader();
-  };
-
-  js.onerror = function () {
-    hideLoader();
-  };
-
-  fjs.parentNode.insertBefore(js, fjs);
-})(window, document, 'script', 'XoZ5', 'https://dev.cabinet.vivacrm.ru/widget.js');
-
-// Конфигурация и инициализация СНАРУЖИ onload (через очередь команд)
-function onDomReady(cb) {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', cb, { once: true });
-  } else {
-    cb();
-  }
-}
-
-onDomReady(function() {
-  window['XoZ5']('init', {
+    w[o]('init', {
   "theme": "light",
   "blocks": [],
   "channel": "cascade",
@@ -178,4 +150,23 @@ onDomReady(function() {
   "slotPriceWithoutGradeImpact": true,
   "personalDataProcessingPolicyLink": "https://#"
 });
-});
+
+  js = d.createElement(s);
+  fjs = document.currentScript || d.getElementsByTagName(s)[0];
+  js.id = o;
+  js.src = f;
+
+  js.async = false;
+
+  js.onload = function () {
+    isWidgetReady = true;
+    hideLoader();
+  };
+
+  js.onerror = function () {
+    hideLoader();
+  };
+
+  fjs.parentNode.insertBefore(js, fjs);
+})(window, document, 'script', 'XoZ5', 'https://dev.cabinet.vivacrm.ru/widget.js');
+
