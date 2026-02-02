@@ -99,7 +99,7 @@
   };
 
   fjs.parentNode.insertBefore(js, fjs);
-})(window, document, 'script', 'XoZ5', 'https://cabinet.vivacrm.ru/widget.js');
+})(window, document, 'script', 'XoZ5', 'https://dev.cabinet.vivacrm.ru/widget.js');
 
 // Конфигурация и инициализация СНАРУЖИ onload (через очередь команд)
 function onDomReady(cb) {
